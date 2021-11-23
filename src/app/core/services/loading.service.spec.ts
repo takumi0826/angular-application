@@ -13,4 +13,14 @@ describe('LoadingService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('isLoadingがtrueになること', () => {
+    service.startLoading();
+    expect(service.isLoading).toBeTruthy();
+  });
+
+  it('isLoadingがtrueになること', () => {
+    service.stopLoading();
+    expect(service.isLoading).toBeFalsy();
+  });
 });
